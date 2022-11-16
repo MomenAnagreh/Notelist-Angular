@@ -1,0 +1,44 @@
+<div class="mainWrapper">
+  <div class="leftWrapper">
+    <div class="titleWrapper">
+      <p>Notes</p>
+
+      <div class="topBtnsWrapper">
+        <button class="deleteBtn" (click)="clearAll()">Clear All</button>
+        <button class="addBtn" (click)="focus()">+</button>
+      </div>
+    </div>
+
+    <div
+      *ngFor="let note of noteService.notelist$ | async"
+      class="noteWrapper"
+      (click)="display(note.title)"
+    >
+      <p class="noteTitle">{{ note.title }}</p>
+      <button (click)="delete(note.title)" class="deleteBtn">Delete</button>
+    </div>
+  </div>
+  <form class="rightWrapper" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      formControlName="title"
+      class="titleInput"
+      (ngModelChange)="enable()"
+      placeholder="Title"
+      #focusTitle
+    />
+    <textarea
+      class="bodyInput"
+      formControlName="body"
+      (ngModelChange)="enable()"
+      placeholder="Body"
+    ></textarea>
+
+    <div class="btnWrapper">
+      <button class="btn" [disabled]="disable" type="button" (click)="revert()">
+        Revert
+      </button>
+      <button class="btn" [disabled]="disable">Save</button>
+    </div>
+  </form>
+</div>

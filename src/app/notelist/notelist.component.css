@@ -1,0 +1,129 @@
+.mainWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+.leftWrapper {
+  min-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.topBtnsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.noteWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.noteWrapper:hover {
+  background-color: rgb(202, 202, 202);
+  box-shadow: 1px 1px 5px rgb(170, 169, 169);
+}
+
+.noteTitle {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  border: none;
+  height: 50%;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+  background-color: lightgrey;
+  box-shadow: 1px 1px 5px rgb(100, 100, 100);
+}
+
+.deleteBtn:hover {
+  box-shadow: 5px 5px 20px rgb(100, 100, 100);
+}
+
+.addBtn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  height: 50%;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.addBtn:hover {
+  font-size: 40px;
+}
+
+.rightWrapper {
+  min-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.titleInput {
+  height: 3%;
+  width: 80%;
+  outline: none;
+  font-size: 24px;
+  border: 1px solid lightgrey;
+  border-bottom: 2px solid black;
+  padding: 20px;
+}
+
+.bodyInput {
+  margin-top: 20px;
+  border: 1px solid lightgrey;
+  height: 16%;
+  width: 80%;
+  border-bottom: 2px solid black;
+  outline: none;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.btnWrapper {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 20%;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 20px;
+}
